@@ -158,6 +158,29 @@ pass**. A passing suite is not evidence the work happened.
 
 ---
 
+## Verified
+
+Ten cases, driven by stub agents so every branch is exercised:
+
+| Case | Expected | Result |
+|---|---|---|
+| Agent plans, asks for approval, exits | exit 65 | ✅ |
+| Agent writes a file | exit 0, no warning | ✅ |
+| Agent commits and leaves a clean tree | exit 0, no warning | ✅ |
+| Missing project / missing spec | exit 66 | ✅ |
+| `delegate.sh` / `worktree.sh` with no arguments | exit 64 + usage | ✅ |
+| `review-status.sh` with no arguments | defaults to cwd, exit 0 | ✅ |
+| All three scripts under bash 3.2 | parse clean | ✅ |
+| Worktree created | branch correct, spec present inside | ✅ |
+| review-status on a tagged commit | listed as unreviewed | ✅ |
+| review-status with untagged commits | warns they are invisible | ✅ |
+
+Writing those tests found a bug in this harness: it writes its log inside the
+project, so its own run directory changed `git status`, `before` never equalled
+`after`, and guard 1 was disabled — silently. It had gone unnoticed because that
+directory happened to be gitignored in the repo it was written in. Now filtered
+explicitly.
+
 ## Requirements
 
 `bash`, `git`, `python3` (only for the optional webhook). No installation, no
