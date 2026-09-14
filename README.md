@@ -185,7 +185,7 @@ explicitly.
 
 `bash`, `git`, `python3` (only for the optional webhook). No installation, no
 network calls except a webhook you configure yourself. Every script is under
-200 lines — read them before you run them.
+210 lines (delegate.sh is 207; the two helpers are 68 and 106) — read them before you run them.
 
 ## License
 

@@ -15,7 +15,7 @@ appears here that is not already in `README.md`.
 | Spec written from a narrow sample | **127/127** tests passing, **88 of 325** real records threw (27%) | one parser task |
 | Test cases this harness passed | **10** | stub agents, both directions |
 | Bug found in the harness while testing it | **1** | guard 5 was silently disabled |
-| Size | **under 200 lines** per script | `wc -l` |
+| Size | **207 / 106 / 68 lines** (delegate / worktree / review-status) | `wc -l` 2026-09-14 |
 
 **Do not claim:** a success rate, time saved, that it works with every agent
 (only `codex exec` was exercised), or any number not in the table above.
@@ -133,7 +133,7 @@ to be gitignored where it was written.
 `AGENT_CMD` is configurable, but `codex exec` is the only agent I've actually
 run it against.
 
-bash and git; python3 only for an optional webhook. Under 200 lines per script.
+bash and git; python3 only for an optional webhook. Under 210 lines per script (207, 106, 68).
 
 ---
 
@@ -195,9 +195,10 @@ bash and git; python3 only for an optional webhook. Under 200 lines per script.
 
 ## Sequencing
 
-Reddit first; the failure taxonomy is what people respond to and the feedback is
-usable before HN. HN second, and only if nothing in the Reddit thread turns up a
-correctness problem — Show HN gets one shot.
+**HN first** (revised 2026-09-14) — the Reddit account has karma 1 and gets
+filtered in large subreddits, so "Reddit feedback before HN" never happens.
+Show HN gets one shot; do the correctness self-check before posting. Reddit
+last, after 2–3 weeks of karma from ordinary replies.
 
 The zsh post (X option 4) is the strongest standalone: it is useful to someone
 who never installs this, which is what makes it travel.
