@@ -192,6 +192,7 @@ network calls except a webhook you configure yourself. Every script is under
 - Zip with the installer, plus email support if it misfires on your setup: [pay what you want (from $2) on Gumroad](https://quietfail.gumroad.com/l/agent-delegate). The code here is the whole product; pay only if the support is worth it to you.
 - Sibling project for *interactive* sessions, three hooks that stop the agent from reporting success over a failed command: [claude-code-guardrails](https://github.com/laika56/claude-code-guardrails).
 - Why summaries drift from what actually ran, with the numbers: [Your coding agent said the tests pass. The command exited 1.](https://repro-log.blogspot.com/2026/09/your-coding-agent-said-tests-pass.html)
+- Need a small automation job done (Python, Excel/VBA, Google Sheets, scraping)? Open an issue titled `[task]` with dummy sample data, get a fixed quote, then pay through [Gumroad (50% deposit, 50% on delivery)](https://quietfail.gumroad.com/l/custom-task).
 
 ## License
 
